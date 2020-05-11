@@ -1,0 +1,218 @@
+<div class="fixed-bg"></div>
+
+<hr>
+
+<div class="container padding">
+   <div class="row">
+      <div class="input-group">
+      <div class="input-group-prepend">
+         <span class="input-group-text">Fecha</span>
+         </div>
+         <input type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5"/>
+         <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker5').datetimepicker();
+            });
+        </script>
+         <input type="text" class="form-control datetimepicker-input" id="datetimepicker6" data-toggle="datetimepicker" data-target="#datetimepicker6"/>
+         <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker6').datetimepicker();
+            });
+        </script>
+        <button type="button" class="btn btn-primary btn-sm ">Ver disponibilidad</button>
+      </div>
+   </div>
+</div>
+
+<div class="container p-4">
+  {{!-- Habitación Sin balcon --}}
+  
+
+  <div class="card">
+  <div class="card-header">
+   <h5 class="text-center">Estándar sin balcón</h5>
+  </div>
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="/img/h1.jpg" class="card-img" style="display:block;margin:auto;" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          
+          <div class="card border-0" >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h5 class="card-title text-center">Descripción</h5>
+                <p class="card-text">Equipada con una cama matrimonial y una individual, aire acondicionado, TV por cable. Capacidad máxima para 3 adultos y 2 menores de 12 años gratis.</p>
+              </li>
+              <li class="list-group-item text-center">
+                <br>
+                <h5 class="card-title ">Servicios</h5>
+                <div class="row">
+                  <div class="col">
+                    <i class="fas fa-wifi"></i>
+                    <p>Wifi Gratis</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-tv"></i>
+                    <p>television por cable</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-bed"></i>
+                    <p>Camas individuales</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-thermometer-half"></i>
+                    <p>Aire acondicionado</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="row justify-content-around">
+              
+
+              <button type="button" class="btn btn-success">Reservar</button>
+              <p></p>
+              <p class="card-text"><small class="text-success">  Habitaciones diponibles</small></p>
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {{!-- Estándar con balcón--}}
+<div class="card">
+  <div class="card-header">
+    <h5 class="text-center">Estándar con balcón</h5>
+  </div>
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="/img/h2.jpg" class="card-img " alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="card border-0" >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h5 class="card-title text-center">Descripción</h5>
+                <p class="card-text">Equipada con una cama matrimonial y una individual, cuenta con un pequeño balcón con vista parcial al mar o al centro de la ciudad, aire acondicionado, TV por cable. Capacidad máxima para 3 adultos y 2 menores de 12 años gratis.</p>
+              </li>
+              <li class="list-group-item text-center">
+                <br>
+                <h5 class="card-title ">Servicios</h5>
+                <div class="row">
+                  <div class="col">
+                    <i class="fas fa-wifi"></i>
+                    <p>Wifi Gratis</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-tv"></i>
+                    <p>television por cable</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-bed"></i>
+                    <p>Camas individuales</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-thermometer-half"></i>
+                    <p>Aire acondicionado</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-eye"></i>
+                    <p>Vista al mar</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="row justify-content-around">
+              
+
+              <button type="button" class="btn btn-success">Reservar</button>
+              <p></p>
+              <p class="card-text"><small class="text-success">  Habitaciones diponibles</small></p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {{!-- Estándar sin balcón --}}
+  
+  
+  <div class="card">
+    <div class="card-header">
+      <h5 class="text-center">Habitación Especial</h5>
+    </div>
+      <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="/img/h3.jpg" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="card border-0" >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h5 class="card-title text-center">Descripción</h5>
+                <p class="card-text">Equipada con dos camas matrimoniales y un sofá, aire acondicionado, TV por cable. Capacidad máxima para 5 adultos y 2 menores de 12 años gratis.</p>
+              </li>
+              <li class="list-group-item text-center">
+                <br>
+                <h5 class="card-title ">Servicios</h5>
+                <div class="row">
+                  <div class="col">
+                    <i class="fas fa-wifi"></i>
+                    <p>Wifi Gratis</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-tv"></i>
+                    <p>television por cable</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-bed"></i>
+                    <p>Camas individuales</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-thermometer-half"></i>
+                    <p>Aire acondicionado</p>
+                  </div>
+                  <div class="col">
+                    <i class="fas fa-eye"></i>
+                    <p>Vista al mar</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="row justify-content-around">
+              
+
+              <button type="button" class="btn btn-success">Reservar</button>
+              <p></p>
+              <p class="card-text"><small class="text-success">  Habitaciones diponibles</small></p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+
+
+

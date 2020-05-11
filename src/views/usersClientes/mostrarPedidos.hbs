@@ -1,0 +1,30 @@
+
+   <div class="row">
+      <div class="col">
+         <h1>Ordenes</h1>
+         <div class="table-responsive-sm">
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th scope="col">Libro</th>
+                     <th scope="col">Tipo Envio</th>
+                     <th scope="col">Estado del pedido</th>
+                     <th scope="col">precio</th>
+                  </tr>
+               </thead>
+               <tbody class="table">
+                  {{#each ordenes}}
+                     <tr>
+                        <td>{{orden}}</td>
+                        <td>{{envio}}</td>
+                        <td>{{estado}}</td>
+                        <td>${{total}}.00</td>
+                     </tr>
+                  {{/each}}
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <hr class="featurette-divider">
+

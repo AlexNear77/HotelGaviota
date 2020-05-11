@@ -1,0 +1,99 @@
+<div class="row">
+   {{!-- Imagen --}}
+   <div class="col-lg-3 p-4">
+
+      <img src="{{producto.imageURL}}" alt="" class="card-img-top" style="display:block;
+                                                                        margin:auto;">
+
+   </div>
+   <!-- /.col-lg-3 -->
+ 
+   <div class="col-lg-7 mx-auto">
+      <!-- Portfolio Item Heading -->
+      <!-- product -->
+      <div class="jumbotron p-4">
+         <h2 class="name">
+            {{producto.nombre}}
+            <small>Autor: <a href="javascript:void(0);">{{producto.autor}}</a></small>
+         </h2>
+         <hr>
+         <h3 class="price-container">
+            ${{producto.precio}}.00
+            <small>*más incluido IVA</small>
+         </h3>
+         <h6>Libros disponibles: <span class="badge badge-info">{{producto.stock}}</span></h6>
+         <hr>
+         <div class="description description-tabs">
+            <ul id="myTab" class="nav nav-pills">
+               <li class="active">{{producto.descripcion}} </li>
+            </ul>
+         </div>
+         <hr>
+         
+               <form action="/productos/checkout" method="POST">
+               {{!-- Tipo de envio --}}
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Tipo de envio</label>
+                     </div>
+                     <select class="custom-select" id="inputGroupSelect01" name="envio" required>
+                        <option selected>Seleciona...</option>
+                        <option value="DHL">DHL</option>
+                        <option value="Fedex">Fedex</option>
+                        <option value="UPS">UPS</option>
+                     </select>
+                  </div>
+               <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+               <a href="javascript:void(0);" class="btn btn-success btn-lg">Añadir al carrito
+                  (${{producto.precio}}.00)</a>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 p-2">
+                  
+                  {{!-- stripe --}}
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                     data-key="pk_test_WTvoUJPyJryxfVLBseVkNi3300A5XEUOAE" data-amount="{{producto.precio}}00"
+                     data-name="BestBook" data-description="Libro: {{producto.nombre}}" data-image="/img/icono.png"
+                     data-locale="auto" >
+                     </script>
+                  <script>
+                     document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                  </script>
+                  {{!-- Con esto le pasamos el id del producto al la ruta para colocar el precio verdadero --}}
+                  <input type="text" name="id" hidden value="{{producto.id}}">
+
+                  <button class="btn btn-success btn-lg">Comprar Ahora (${{producto.precio}}.00)</button type="submit">
+               </form>
+            </div>
+
+         </div>
+      </div>
+      <!-- end product -->
+
+
+
+
+
+
+   </div>
+   {{!-- /.col6 --}}
+
+   {{!-- Imagen --}}
+   <div class="col-lg-2">
+
+      <p class="lead">Recomendaciones</p>
+      {{#each libros}}
+      <div class="card" style="width: 12rem;">
+         <img src="{{imageURL}}" class="card-img-top" alt="...">
+         <div class="card-body">
+            <h5 class="card-title">{{nombre}}</h5>
+            <p class="card-text">{{descripcionCorta}}</p>
+            <a href="#" class="btn btn-primary btn-block">Ver mas</a>
+         </div>
+      </div>
+      {{/each}}
+
+   </div>
+   <!-- /.col-lg-2 -->
+
+</div>
